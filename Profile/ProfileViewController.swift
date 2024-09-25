@@ -7,7 +7,11 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+#if DEBUG
+        view.backgroundColor = .red
+        #else
+        view.backgroundColor = .green
+#endif
         setupProfileHeaderView()
         setupCustomButton()
     }
